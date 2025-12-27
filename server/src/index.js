@@ -45,8 +45,8 @@ async function seed() {
             email: 'sriharimannam7@gmail.com',
             phone: '+916281512171',
             availabilityRules: [
-                { dayOfWeek: 1, timeRanges: [{ start: '08:00', end: '19:00' }] },
-                { dayOfWeek: 3, timeRanges: [{ start: '08:00', end: '19:00' }] },
+                { dayOfWeek: 2, timeRanges: [{ start: '08:00', end: '19:00' }] },
+                { dayOfWeek: 4, timeRanges: [{ start: '08:00', end: '19:00' }] },
                 { dayOfWeek: 5, timeRanges: [{ start: '08:00', end: '19:00' }] }
             ],
             leadTimeMinHours: 24

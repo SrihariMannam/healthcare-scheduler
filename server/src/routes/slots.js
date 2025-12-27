@@ -36,7 +36,7 @@ router.post('/slots', async (req, res) => {
             if (['_id', '__v', 'createdAt', 'updatedAt', 'name', 'role', 'specialty', 'phone', 'email'].includes(key)) return undefined
             return value;
         }),
-        "window": {"start": "2025-12-26", "end": "2026-01-10"},
+        "window": {"start": "2025-01-04", "end": "2026-02-12"},
         "maxSuggestions": 10,
         "clinicHolidays": ["2025-12-31"],
         objective: "Return ranked appointment slots (ISO RFC3339) with start, end, scores and reasons. Penalize conflicts, honor buffers, respect both time zones."
