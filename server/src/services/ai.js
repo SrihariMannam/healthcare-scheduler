@@ -7,7 +7,7 @@ export async function getAISlotSuggestions(payload) {
     const response = await axios.post(config.claude_apiUrl, {
         model: config.claude_model,
         max_tokens: 2048,
-        temperature: 0.2,
+        temperature: 1,
         system: 'You optimize healthcare appointment slots with constraints and send response as json array.',
         messages: [
             { role: 'user', content: JSON.stringify(payload) }
@@ -21,9 +21,9 @@ export async function getAISlotSuggestions(payload) {
         }
     });
 
-    // console.log(response.data)
     const text = response.data?.content?.[0]?.text ?? '{}';
     const parsed = safeJson(text);
+    console.log(parsed)
     return (parsed || []).sort((a, b) => b.score - a.score);
 }
 
